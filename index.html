@@ -82,6 +82,7 @@
   <body class="flex flex-col mx-auto bg-slate-200">
     <header class="m-10 items-center justify-items-center">
       <p class="text-xl">The Last File</p>
+      <p class="text-xs text-slate-400">v 0.6.2</p>
     </header>
 
     <main class="grid grid-cols-1 md:grid-cols-5 gap-1">
@@ -289,11 +290,23 @@
       </aside>
     </main>
 
-    <footer class="m-10 items-center justify-items-center">
-      <p></p>
+    <footer class="m-10 justify-center">
+      <div class="flex flex-col items-center">
+        <p class="text-xs text-slate-400">Made with ❤️ in Latvia</p>
+        <a class="text-xs text-slate-400" href="https://github.com/uniqqqqque"
+          >by uniqqqqque</a
+        >
+      </div>
     </footer>
 
-    <script src="advancedUpgrades.js"></script>
-    <script src="engine.js"></script>
+    <script src="src/data/advancedUpgradesDataBase.js"></script>
+    <script src="src/state/dom.js"></script>
+    <script src="src/system/advancedUpgrades.js"></script>
+    <script src="src/system/prestige.js"></script>
+    <script src="src/system/economy.js"></script>
+    <script src="src/system/download.js"></script>
+    <script src="src/system/basicUpgrades.js"></script>
+    <script src="src/state/render.js"></script>
+    <script src="src/main.js"></script>
   </body>
 </html>
