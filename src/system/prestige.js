@@ -1,4 +1,4 @@
-// Prestige + reset/format handlers (globals, no build step)
+// Prestige + reset/format handlers
 
 function resetRunForPrestige() {
   archivedFiles = 0;
@@ -10,7 +10,15 @@ function resetRunForPrestige() {
   passiveIncome = 0;
   finding = false;
 
-  activeDownloadsList = [];
+  // stop active downloads
+  if (activeDownloadsList && Array.isArray(activeDownloadsList)) {
+    activeDownloadsList.forEach((download) => {
+      if (download.intercalId) clearInterval(download.intercalId);
+      if (download.element && download.element.parentNode) {
+        download.element.parentNode.removeChild(download.element);
+      }
+    });
+  }
   if (foundFilesElement) foundFilesElement.innerHTML = "";
 
   // reset core stats
@@ -38,7 +46,7 @@ if (prestigeButton) {
 
     if (
       confirm(
-        "Prestige? This resets your run, but permanently doubles upgrade effectiveness",
+        "Prestige? This resets your run, but permanently insreace upgrade effectiveness",
       )
     ) {
       prestigeLevel += 1;

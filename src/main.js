@@ -1,5 +1,3 @@
-// Entry point (globals, no build step)
-
 // --- dynamic game values
 let archivedFiles = 0;
 let storageUsed = 0;
@@ -51,9 +49,9 @@ let chanceEpic = 0.05;
 let chanceLegendary = 0.01;
 
 // --- file multipliers
-let multRare = 5; // 5x fileSize
-let multEpic = 10;
-let multLegendary = 100;
+let multRare = 2; // 5x fileSize
+let multEpic = 5;
+let multLegendary = 10;
 
 // --- runtime lists
 let activeDownloadsList = [];
